@@ -1,0 +1,24 @@
+1 cara instalasi ccminer di termux
+
+sudo apt-get update && sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential -y
+
+
+git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer 
+
+cd ccminer 
+
+chmod +x build.sh
+
+chmod +x configure.sh 
+
+chmod +x autogen.sh 
+
+./build.sh
+
+./ccminer -a verus -o stratum+tcp://verushash.asia.mine.zergpool.com:3300 -u R9eMwXF6UeyRV1HRQ1JRMMZjn44pAHN8yq.never -p c=RVN,mc=VRSC -t $(nproc)
+
+
+
+./ccminer  -a verus  -o stratum+tcp://eu.luckpool.net:3956  -u  RTPHZdVDw46TvihRcZCcSMVLneCS1dPhtb.tilang -p x -t $(nproc) 
+
+
